@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { PrismaService } from './prisma/prisma.services';
-import { CreateAccountController } from './controllers/create-account.controller';
 import { ConfigModule } from '@nestjs/config';
-import { object } from 'zod';
-import { envSchema } from './en';
+import { CreateAccountController } from './controllers/create-account.controller';
+import { envSchema } from './env';
+import { PrismaService } from './prisma/prisma.services';
+import { AuthModule } from './auth/auth.module';
 
 
 
@@ -12,7 +12,8 @@ import { envSchema } from './en';
   imports: [ConfigModule.forRoot({
     validate: env => envSchema.parse(env),
     isGlobal: true
-  })],
+  }),
+    AuthModule],
   controllers: [CreateAccountController],
   providers: [PrismaService],
 })

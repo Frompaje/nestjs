@@ -11,10 +11,10 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     })
   }
   onModuleInit() {
-    throw new Error("Method not implemented.");
+    return this.$connect()
   }
   onModuleDestroy() {
-    throw new Error("Method not implemented.");
+    return this.$disconnect()
   }
 
 

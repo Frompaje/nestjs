@@ -35,7 +35,6 @@ describe("Create account (E2E)", () => {
       where: {
         email: "oliver@gmail.com"
       }
-
     })
 
     expect(userOnDataBase.email).toBe("oliver@gmail.com")

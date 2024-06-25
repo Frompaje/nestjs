@@ -7,7 +7,8 @@ export class ZodValidationPipe implements PipeTransform {
 
   transform(value: any) {
     try {
-      this.schema.parse(value)
+      const schemaParse = this.schema.parse(value)
+      return schemaParse
     } catch (error) {
 
       if (error instanceof ZodError) {

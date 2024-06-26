@@ -1,4 +1,4 @@
-import { PrismaService } from "@/infra/prisma/prisma.services"
+import { PrismaService } from "@/infra/database/prisma/prisma.services"
 import { INestApplication } from "@nestjs/common"
 import { JwtService } from "@nestjs/jwt"
 import { Test } from "@nestjs/testing"

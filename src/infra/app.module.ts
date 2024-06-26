@@ -6,7 +6,7 @@ import { CreateQuestionController } from './http/controllers/create-question.con
 import { FecthRecentQuestionsController } from './http/controllers/fecth-recent-questions.controller';
 import { AuthModule } from './auth/auth.module';
 import { envSchema } from './env';
-import { PrismaService } from './prisma/prisma.services';
+import { PrismaService } from './database/prisma/prisma.services';
 
 
 

@@ -1,8 +1,8 @@
-import { AppModule } from "@/app.module"
-import { PrismaService } from "@/prisma/prisma.services"
+import { PrismaService } from "@/infra/prisma/prisma.services"
 import { INestApplication } from "@nestjs/common"
 import { Test } from "@nestjs/testing"
 import request from "supertest"
+import { AppModule } from "@/infra/app.module"
 
 describe("Create account (E2E)", () => {
   let app: INestApplication

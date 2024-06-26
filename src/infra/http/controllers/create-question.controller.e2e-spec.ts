@@ -1,10 +1,10 @@
-import { AppModule } from "@/app.module"
-import { PrismaService } from "@/prisma/prisma.services"
+import { PrismaService } from "@/infra/prisma/prisma.services"
 import { INestApplication } from "@nestjs/common"
 import { JwtService } from "@nestjs/jwt"
 import { Test } from "@nestjs/testing"
 import { hash } from "bcryptjs"
 import request from "supertest"
+import { AppModule } from "../../app.module"
 
 describe("Create questions (E2E)", () => {
   let app: INestApplication
